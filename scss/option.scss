@@ -1,0 +1,402 @@
+@import 'config';
+@import 'main';
+
+main{
+    background-color: $bgGrey;
+
+    .breadcrumsb{
+        padding-top:20px;
+        padding-bottom: 23px;
+
+        .breadcrumb-content{
+            margin-left: -15px;
+            margin-right:-15px;
+
+            ul{
+                @include flex;
+                
+                
+                li{
+                    display: inline-block;
+                    position: relative;
+                    padding-right:12px;
+                    margin-right:4px;
+                    font-size:1.4rem;
+                    font-weight: 400;
+
+                    a{
+                        color: $breadcrumsbColor;
+                    }
+
+                    &::after{
+                        content: "/";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: $blackColor;
+                    }
+
+                    &:last-child::after{
+                        content: "";
+                    }
+
+                    &:hover{
+                        a{
+                            color: $yellowColor;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-page{
+        display: flex;
+        justify-content:space-between;
+
+        .side-page{
+
+            &.left-page{
+                width:20%;
+                max-width: 20%;
+                margin-right: 30px;
+
+                .filter{
+
+                    .filter-option{
+                        margin-bottom: 20px;
+    
+                        &:nth-child(2){
+                            display: block;
+                            margin-bottom: 30px;
+                        }
+    
+                        .filter-option-title{
+                            margin-bottom: 14px;
+    
+                            h1{
+                                font-size: $medFont;
+                                font-weight: 500;
+                                color: $blackColor;
+                                line-height: 20px;
+                                text-transform: uppercase;
+                                position: relative;
+    
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    background-color: #222;
+                                    height:2px;
+                                    width:14px;
+                                }
+                            }
+                        }
+    
+                        .price-option{
+                            
+                            &-content{
+                                @include flexBetween;
+                                width: 100%;
+    
+                                span{
+                                    display: block;
+                                    margin: 0 10px;
+                                    width: 8px;
+                                    max-width:8px;
+        
+                                    &::after{
+                                        content: "";
+                                        display:block;
+                                        width:0;
+                                        height:0;
+                                        border-style: solid;
+                                        border-width: 4px 0 4px 8px;
+                                        border-color: transparent transparent transparent #828282;
+                                    }
+                                }
+        
+                                input{
+                                    display:block;
+                                    width:100%;
+                                    padding: 10px 12px;
+                                    background-color:$whiteColor;
+                                    font-size:$mainFont;
+                                    line-height:16px;
+                                    color:$inputColor;
+                                    border:1px solid #a3a3a3;
+                                    border-radius: 3px;
+                                    box-shadow: none;
+                                    outline: none;
+    
+                                    &#max-price{
+                                        border-right: none;
+                                        border-radius: 3px 0 3px 3px;
+                                    }
+                                }
+    
+                                button{
+                                    padding: 10px 8px;
+                                    background-color:$blackColor;
+                                    border-radius: 0 3px 3px 0;
+                                    border:1px solid $blackColor;
+                                    border-left: none;
+                                }
+                            }
+                        }
+    
+                        .filter-option-content{
+    
+                            .items{
+                                color: $mainGreyColor;
+                                font-size: $mainFont;
+                                line-height:16px;
+                                font-weight: 400;
+    
+                                .item{
+                                    position: relative;
+                                    margin-bottom: 10px;
+                                    cursor: pointer;
+                                    @include flex;
+
+                                    input{
+                                        // opacity: 0;
+                                        position: relative;
+                                        top: 10px;
+                                        opacity: 0;
+                                    }
+
+                                    span{
+                                        text-transform: capitalize;
+                                        flex: 1;
+                                        line-height: 24px;
+                                    }
+                                    
+                                    .item-image{
+                                        position: relative;
+                                        display:inline-block;
+                                        flex:1;
+                                        max-width:24px;
+                                        width:24px;
+                                        height:24px;
+                                        border-radius: 50%;
+                                        margin: 0 10px;
+                                        border: 1px solid #dcdcdc;
+                                        background-size:cover ;
+    
+                                        &.white{
+                                            background-color:$whiteColor;
+                                        }
+                                        &.red{
+                                            background-color:red;
+                                        }
+    
+                                        .check-box{
+                                            position: absolute;
+                                            left: -22px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            background-color: $whiteColor;
+                                            @include flexCenter;
+                                            height:16px;
+                                            width:16px;
+                                            border-radius: 3px;
+                                            box-shadow: 0 0 0 1px $medGreyColor;
+                                            transition: all .3s ease;
+                                            // Xử lí check bằng js
+                                        }
+                                    }
+
+                                    &.active{
+
+                                        .check-box{
+                                            background-color:$blackColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.right-page{
+                flex: 1;
+                // background-color:grey;
+
+                .product-count{
+                    margin-bottom:10px;
+
+                    h1{
+                        font-size:$medBigFont;
+                        font-weight: 400;
+                        line-height:26px;
+                        color: $mainGreyColor;
+                    }
+                }
+
+                .toolbar{
+                    background-color:$bgToolbar;
+                    padding: 12px 10px;
+                    font-size: $mainFont;
+                    // line-height: 20px;
+                    font-weight: 400;
+                    display: flex;
+                    justify-content:flex-start;
+                    align-items: center;
+
+                    .toolbar-title{
+                        color: $blackColor;
+                        display: inline-block;
+                        margin:0 10px;
+                    }
+
+                    .toolbar-option{
+                        padding: 10px 13px;
+                        background-color:$whiteColor;
+                        color:$toolbarTextColor;
+                        margin-right: 12px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: all .3s ease;
+
+                        span{
+                            text-align:center;
+                            display:inline-block;
+                            width: 100%;
+                        }
+
+                        input{
+                            opacity:0;
+                            position: absolute;
+                        }
+
+                        &.active{
+                            background-color:$blackColor;
+                            color:$whiteColor;
+                        }
+                    }
+                }
+
+                .product-content{
+                    @extend .product-content;
+                    overflow:unset;
+                    height:auto;
+                    margin-top: 28px;
+
+                    .product-list{
+                        @include flex;
+                        align-items: unset;
+                        height:auto;
+                        flex-wrap: wrap;
+                        margin-left: -10px;
+                        margin-right: -10px;
+                        
+                        .product-item{
+                            @extend .product-item;
+                            max-width: 25%;
+                            width:25%;
+                            margin-bottom:20px;
+            
+                            &-info{
+                                min-height: unset;
+                                position: relative;
+                                border-radius: 5px;
+                                overflow: hidden;
+
+                                .product-item-img{
+                                    border-radius: unset;
+                                }
+
+                                .product-item-details{
+                                    padding: 10px 10px 20px;
+
+                                    .product-item-desc{
+                                        -webkit-line-clamp: 1; 
+                                    }
+                                }
+    
+                                .sale-info{
+                                    position: absolute;
+                                    z-index: 1;
+                                    left: 0;
+                                    top: 0;
+                                    background-color:#D71414;
+                                    border-radius: 5px 0 0 0;
+                                    padding: 5px 5px 15px;
+                                    clip-path: polygon(0 0, 100% 0, 100% 72.9%, 0% 100%);
+
+                                    p{
+                                        font-size:$mainFont;
+                                        font-weight:500;
+                                        line-height:16px;
+                                        color:$whiteColor;
+                                    }
+
+                                    ::after{
+                                        content: "";
+                                        width: 36px;
+                                        height:10px;
+                                        position:absolute;
+                                        left: 0;
+                                        bottom: 0px;
+                                        filter: opacity(0.2);
+                                        z-index: 2;
+                                    }
+                                }
+
+                                .product-item-price{
+                                    font-size:$priceBigFont;
+                                    line-height:20px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .pagination{
+                    width:100%;
+                    margin: 20px 0;
+                    @include flexCenter;
+
+                    ul{
+                        display:flex;
+                        
+                        li{
+                            a{
+                                font-size: $medFont;
+                                font-weight: 400;
+                                color: $toolbarTextColor;
+                                display:block;
+                                width:30px;
+                                height:30px;
+                                text-align: center;
+                                line-height:30px;
+                                transition:all .3s ease;
+                            }
+
+                            &.active{
+                                a{
+                                    background:$yellowColor;
+                                    color: $whiteColor;
+                                    border-radius: 50%;
+                                    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+                                }
+                            }
+
+                            &:hover:not(.active){
+                                a{
+                                    color:$yellowColor ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
