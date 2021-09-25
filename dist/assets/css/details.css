@@ -510,6 +510,10 @@ main .container .breadcrumsb {
   padding-bottom: 23px;
 }
 
+main .container .breadcrumsb .container {
+  padding-bottom: 0;
+}
+
 main .container .breadcrumsb .breadcrumb-content {
   margin-left: -15px;
   margin-right: -15px;
