@@ -70,4 +70,36 @@
             moveItem(navSlide,movePerNavItem,index2,"Y");
         })
     })
+    
+    // Amount control
+    const plusBtn = document.querySelector(".plus-action"),
+        minusBtn = document.querySelector(".minus-action");
+    let amountScreen = document.querySelector(".amount");
+    let number = amountScreen.innerText;
+
+    plusBtn.addEventListener("click", ()=>{
+        number ++;
+        amountScreen.innerText = number;
+    })
+
+    minusBtn.addEventListener("click", ()=>{
+        if(number <= 1){
+            return;
+        }
+        number --;
+        amountScreen.innerText = number;
+    })
+
+    // Size control
+    const optionBtn = document.querySelectorAll(".size-options .option");
+
+    Array.from(optionBtn).forEach((e)=>{
+        e.addEventListener('click', function(){
+            for(let i = 0; i < optionBtn.length; i++){
+                optionBtn[i].style.borderColor = 'rgba(0, 0, 0, 0.2)';
+            }
+
+            this.style.borderColor = 'red';
+        })
+    })
 })();
