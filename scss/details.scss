@@ -75,13 +75,16 @@ main{
                     width: 85px;
                     overflow: hidden;
                     margin-right:30px;
-                    margin-top: -20px;
-    
-                    .item{
-                        padding-top: 20px;
-    
-                        img{
-                            max-width: 100%;
+                    
+                    .product-nav-container{
+                        margin-top: -20px;
+
+                        .item{
+                            padding-top: 20px;
+        
+                            img{
+                                max-width: 100%;
+                            }
                         }
                     }
                 }

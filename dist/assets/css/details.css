@@ -580,14 +580,17 @@ main .container .main-page .product-slide .product-slide-nav {
   width: 85px;
   overflow: hidden;
   margin-right: 30px;
+}
+
+main .container .main-page .product-slide .product-slide-nav .product-nav-container {
   margin-top: -20px;
 }
 
-main .container .main-page .product-slide .product-slide-nav .item {
+main .container .main-page .product-slide .product-slide-nav .product-nav-container .item {
   padding-top: 20px;
 }
 
-main .container .main-page .product-slide .product-slide-nav .item img {
+main .container .main-page .product-slide .product-slide-nav .product-nav-container .item img {
   max-width: 100%;
 }
 

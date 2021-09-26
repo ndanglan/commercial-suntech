@@ -122,7 +122,7 @@ body {
 .footer .footer-info-wrap li .info-more.info-details {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (3,max-content);
+  -ms-grid-columns: (max-content)[3];
       grid-template-columns: repeat(3, -webkit-max-content);
       grid-template-columns: repeat(3, max-content);
   -ms-grid-rows: auto;
