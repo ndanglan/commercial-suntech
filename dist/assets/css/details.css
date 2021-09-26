@@ -386,7 +386,7 @@ body {
   display: -ms-grid;
   display: grid;
   margin-bottom: 24px;
-  -ms-grid-columns: (1fr)[2];
+  -ms-grid-columns: (2,1fr);
       grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 30px;
 }
