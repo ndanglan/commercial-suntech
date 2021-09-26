@@ -67,14 +67,14 @@ main{
             // margin-bottom: 30px;
     
             .product-slide{
-                width:50%;
+                width:53%;
                 display: flex;
                 
                 .product-slide-nav{
+                    max-height: 760px;
                     width: 85px;
                     overflow: hidden;
                     margin-right:30px;
-                    margin-bottom: -20px;
                     margin-top: -20px;
     
                     .item{
@@ -90,24 +90,21 @@ main{
                     width:calc(100% - 115px);
                     flex:1;
                     position: relative;
-                    @include flexCenter;
     
                     .main-slider{
                         overflow:hidden;
-                        width:100%;
+                        margin-right: -15px;
     
                         &-container{
                             @include flex;
-                            transition: margin 1s ease;
+                            align-items:flex-start;
     
                             .main-item{
                                 width:500px;
-                                // padding: 0 30px;
-                                // display: flex;
-                                // justify-content: center;
+                                display:block;
                                 
                                 img{
-                                    min-width: 100%;
+                                    min-width: 500px;
                                 }
                             }
                         }
@@ -132,7 +129,7 @@ main{
                         }
     
                         &.right{
-                            right:-30px;
+                            right:-15px;
                             top: 50%;
                             transform: translateY(-50%);
                         }
@@ -147,7 +144,7 @@ main{
             }
     
             .product-info{
-                // width: 50%;
+                width: 47%;
                 margin-left: 80px;
     
                 &>div{

@@ -569,17 +569,17 @@ main .container .main-page {
 }
 
 main .container .main-page .product-slide {
-  width: 50%;
+  width: 53%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 main .container .main-page .product-slide .product-slide-nav {
+  max-height: 760px;
   width: 85px;
   overflow: hidden;
   margin-right: 30px;
-  margin-bottom: -20px;
   margin-top: -20px;
 }
 
@@ -597,20 +597,11 @@ main .container .main-page .product-slide .main-img {
       -ms-flex: 1;
           flex: 1;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 main .container .main-page .product-slide .main-img .main-slider {
   overflow: hidden;
-  width: 100%;
+  margin-right: -15px;
 }
 
 main .container .main-page .product-slide .main-img .main-slider-container {
@@ -620,16 +611,18 @@ main .container .main-page .product-slide .main-img .main-slider-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: margin 1s ease;
-  transition: margin 1s ease;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 main .container .main-page .product-slide .main-img .main-slider-container .main-item {
   width: 500px;
+  display: block;
 }
 
 main .container .main-page .product-slide .main-img .main-slider-container .main-item img {
-  min-width: 100%;
+  min-width: 500px;
 }
 
 main .container .main-page .product-slide .main-img .control {
@@ -661,7 +654,7 @@ main .container .main-page .product-slide .main-img .control.left {
 }
 
 main .container .main-page .product-slide .main-img .control.right {
-  right: -30px;
+  right: -15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -673,6 +666,7 @@ main .container .main-page .product-slide .main-img .control:hover {
 }
 
 main .container .main-page .product-info {
+  width: 47%;
   margin-left: 80px;
 }
 
