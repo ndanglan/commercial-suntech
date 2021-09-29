@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FONT AWEASOME -->
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 <body>
     <div class="app">
@@ -86,9 +88,12 @@
                             <a href="" class="header__logo-link">
                                 <img src="./assets/img/logo.jpg" alt="">
                             </a>
+                            <a href="#" class="header__logo-hamburger">
+                                <i class="fas fa-bars"></i>
+                            </a>
                         </div>
                         <div class="header__search">
-                                <div class="header__search-category toggle-button">
+                            <div class="header__search-category toggle-button">
                                     <a href="#" class="arrow-down">All</a>
                                     <ul class="category-menu header__navbar-item-option ">
                                         <li>
@@ -147,23 +152,37 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="header__search-input">
+                            </div>
+                            <div class="header__search-input">
                                     <input type="text" placeholder="Nhập Để Tìm Kiếm Sản Phẩm">
-                                </div>
-                                <div class="header__search-btn">
-                                    <button class="search-btn">
-                                        
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19.7722 18.6726L14.8912 13.7917C16.1045 12.3328 16.8354 10.4593 16.8354 8.41797C16.8354 3.77628 13.0592 0 8.41776 0C3.77618 0 0 3.77628 0 8.41797C0 13.0593 3.77618 16.8353 8.41776 16.8353C10.459 16.8353 12.3325 16.1045 13.7915 14.8912L18.6726 19.7722C18.8244 19.9241 19.0234 20 19.2224 20C19.4214 20 19.6204 19.9241 19.7723 19.7722C20.076 19.4685 20.076 18.9763 19.7722 18.6726ZM1.55518 8.41797C1.55518 4.63381 4.6337 1.55518 8.41776 1.55518C12.2017 1.55518 15.2801 4.63381 15.2801 8.41797C15.2801 12.2018 12.2017 15.2801 8.41776 15.2801C4.6337 15.2801 1.55518 12.2018 1.55518 8.41797Z" fill="white"/>
-                                                </svg>
-    
-                                    </button>
-                                </div>
+                            </div>
+                            <div class="header__search-btn">
+                                <button class="search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.7722 18.6726L14.8912 13.7917C16.1045 12.3328 16.8354 10.4593 16.8354 8.41797C16.8354 3.77628 13.0592 0 8.41776 0C3.77618 0 0 3.77628 0 8.41797C0 13.0593 3.77618 16.8353 8.41776 16.8353C10.459 16.8353 12.3325 16.1045 13.7915 14.8912L18.6726 19.7722C18.8244 19.9241 19.0234 20 19.2224 20C19.4214 20 19.6204 19.9241 19.7723 19.7722C20.076 19.4685 20.076 18.9763 19.7722 18.6726ZM1.55518 8.41797C1.55518 4.63381 4.6337 1.55518 8.41776 1.55518C12.2017 1.55518 15.2801 4.63381 15.2801 8.41797C15.2801 12.2018 12.2017 15.2801 8.41776 15.2801C4.6337 15.2801 1.55518 12.2018 1.55518 8.41797Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="header-logo-mobile">
+                                <a href="#">
+                                    <img src="./assets/img/logo.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="header__cart">
+                            <div class="search-icon-mobile">
+                                <button class="search-btn">
+                                    <svg width="20" height="28" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.7722 18.6726L14.8912 13.7917C16.1045 12.3328 16.8354 10.4593 16.8354 8.41797C16.8354 3.77628 13.0592 0 8.41776 0C3.77618 0 0 3.77628 0 8.41797C0 13.0593 3.77618 16.8353 8.41776 16.8353C10.459 16.8353 12.3325 16.1045 13.7915 14.8912L18.6726 19.7722C18.8244 19.9241 19.0234 20 19.2224 20C19.4214 20 19.6204 19.9241 19.7723 19.7722C20.076 19.4685 20.076 18.9763 19.7722 18.6726ZM1.55518 8.41797C1.55518 4.63381 4.6337 1.55518 8.41776 1.55518C12.2017 1.55518 15.2801 4.63381 15.2801 8.41797C15.2801 12.2018 12.2017 15.2801 8.41776 15.2801C4.6337 15.2801 1.55518 12.2018 1.55518 8.41797Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="header__cart-icon">
-                                <svg width="24" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="30" height="45" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0)">
                                         <path d="M26.1436 27.0797L24.0155 6.81392C23.9708 6.38967 23.6132 6.06752 23.1866 6.06752H19.1868V5.15557C19.1868 2.31289 16.8739 0 14.0312 0C11.1883 0 8.87542 2.31289 8.87542 5.15557V6.06752H4.87555C4.44895 6.06752 4.09134 6.38967 4.0467 6.81392L1.91859 27.0797C1.89402 27.3144 1.97028 27.5488 2.12815 27.7244C2.28623 27.8998 2.51139 27.9999 2.74744 27.9999H25.3145C25.5508 27.9999 25.776 27.8998 25.9338 27.7244C26.0921 27.5488 26.1682 27.3144 26.1436 27.0797ZM10.5421 5.15557C10.5421 3.2319 12.1073 1.66668 14.0312 1.66668C15.9549 1.66668 17.5201 3.2319 17.5201 5.15557V6.06752H10.5421V5.15557ZM3.67286 26.3333L5.62601 7.73421H8.87542V9.57072C8.87542 10.0309 9.24862 10.4041 9.70876 10.4041C10.1689 10.4041 10.5421 10.0309 10.5421 9.57072V7.73421H17.5201V9.57072C17.5201 10.0309 17.8933 10.4041 18.3534 10.4041C18.8136 10.4041 19.1868 10.0309 19.1868 9.57072V7.73421H22.4362L24.3893 26.3333H3.67286Z" fill="white"/>
                                     </g>
@@ -175,11 +194,12 @@
                                 </svg>
                                 <span class="header__cart-counter">0</span>
                             </div>
-                            
                         </div>
                     </div>
-                </div>
-                
+                    <div class="header-with-search-input-mobile">
+                        <input type="text" placeholder="Nhập Để Tìm Kiếm Sản Phẩm">
+                    </div>
+                </div>    
                 <div class="header-menu">
                     <div class="container header-menu-container">
                         <ul class="header-menu-options">
@@ -302,6 +322,138 @@
                         </ul>
                     </div>
                 </div>
+                <div class="header-menu-tablet-mobile">
+                    <ul>
+                        <li class="header-menu-tablet-mobile-item">
+                            <a href="#" data-toggle="sub">Áo</a>
+                            <a href="#" class="icon">
+                                <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.61314 6.61587L1.14849 0.151218C0.934473 -0.0554735 0.593437 -0.0495392 0.386745 0.164476C0.185104 0.373251 0.185104 0.704217 0.386745 0.912961L6.47052 6.99674L0.386745 13.0805C0.176423 13.2909 0.176423 13.6319 0.386745 13.8423C0.597131 14.0526 0.938134 14.0526 1.14849 13.8423L7.61314 7.37761C7.82346 7.16722 7.82346 6.82622 7.61314 6.61587Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="sub-menu-tablet-mobile">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Áo sơ mi 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Áo kiểu
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Áo khoác 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Áo Jean 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu-tablet-mobile-item">
+                            <a href="#" data-toggle="sub">Đầm/Yếm/Jum</a>
+                            <a href="#" class="icon"> 
+                                <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.61314 6.61587L1.14849 0.151218C0.934473 -0.0554735 0.593437 -0.0495392 0.386745 0.164476C0.185104 0.373251 0.185104 0.704217 0.386745 0.912961L6.47052 6.99674L0.386745 13.0805C0.176423 13.2909 0.176423 13.6319 0.386745 13.8423C0.597131 14.0526 0.938134 14.0526 1.14849 13.8423L7.61314 7.37761C7.82346 7.16722 7.82346 6.82622 7.61314 6.61587Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="sub-menu-tablet-mobile">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Đầm
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Yếm
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Jum 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu-tablet-mobile-item">
+                            <a href="#" data-toggle="sub">Chân Váy</a>
+                            <a href="#" class="icon">
+                                <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.61314 6.61587L1.14849 0.151218C0.934473 -0.0554735 0.593437 -0.0495392 0.386745 0.164476C0.185104 0.373251 0.185104 0.704217 0.386745 0.912961L6.47052 6.99674L0.386745 13.0805C0.176423 13.2909 0.176423 13.6319 0.386745 13.8423C0.597131 14.0526 0.938134 14.0526 1.14849 13.8423L7.61314 7.37761C7.82346 7.16722 7.82346 6.82622 7.61314 6.61587Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="sub-menu-tablet-mobile">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Chân Váy Chữ A
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Chân Váy Bút Chì
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu-tablet-mobile-item">
+                            <a href="#" data-toggle="sub">Quần</a>
+                            <a href="#" class="icon">
+                                <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.61314 6.61587L1.14849 0.151218C0.934473 -0.0554735 0.593437 -0.0495392 0.386745 0.164476C0.185104 0.373251 0.185104 0.704217 0.386745 0.912961L6.47052 6.99674L0.386745 13.0805C0.176423 13.2909 0.176423 13.6319 0.386745 13.8423C0.597131 14.0526 0.938134 14.0526 1.14849 13.8423L7.61314 7.37761C7.82346 7.16722 7.82346 6.82622 7.61314 6.61587Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="sub-menu-tablet-mobile">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                           Quần Âu
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Quần Baggy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu-tablet-mobile-item">
+                            <a href="#" data-toggle="sub">Phụ kiện</a>
+                            <a href="#" class="icon">
+                                <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.61314 6.61587L1.14849 0.151218C0.934473 -0.0554735 0.593437 -0.0495392 0.386745 0.164476C0.185104 0.373251 0.185104 0.704217 0.386745 0.912961L6.47052 6.99674L0.386745 13.0805C0.176423 13.2909 0.176423 13.6319 0.386745 13.8423C0.597131 14.0526 0.938134 14.0526 1.14849 13.8423L7.61314 7.37761C7.82346 7.16722 7.82346 6.82622 7.61314 6.61587Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <div class="sub-menu-tablet-mobile">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                           Quần lót
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Áo lót nữ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Sale Off</a>
+                        </li>
+                    </ul>
+                </div>
         </header>
         <div class="header-overlay">
         </div>
@@ -312,7 +464,6 @@
                     <a href="#">
                         <img src="./assets/img/banner1.jpg" alt="">
                     </a>
-
                 </div>
                 <div class="banner">
                     <a href="#">
@@ -373,7 +524,7 @@
                                             </a>
                                             <div class="product-item-price">
                                                 <span>169.000₫</span>
-                                                <span>338.000₫</span>
+                                                <span class="net-price">338.000₫</span>
                                             </div>
                                         </div>
                                     </div>
@@ -561,7 +712,7 @@
                                 </span>
                             </a>
                         </div>
-                         <div class="product-content">
+                        <div class="product-content">
                             <div class="product-slider">
                                 <span class="slider-control slider-control-left">  
                                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">

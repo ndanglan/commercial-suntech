@@ -544,7 +544,7 @@
     Array.from(filterColors).forEach(function (element) {
         element.addEventListener('click', function () {
             let dataFilter = this.getAttribute("data-filter");
-            let currentPageFilter = 1;
+            
             filteredProducts = getLocalStorage();
 
             if (this.classList.contains("active")) {
@@ -572,18 +572,17 @@
             if(filteredProducts.length == 0){
                 totalPages = Math.ceil(product.length / perPage);
                 currentPageFull = 1;
-                start = 0 ;
-                end = perPage;
 
+                getCurrentPage(currentPageFull)
                 render(product,start,end);
                 renderListPage(product,start,totalPages);
                 clickActionBtn(product,currentPageFull,totalPages);
                 changePage(currentPageFull,product);
             }else{
                 totalPages = Math.ceil(filteredProducts.length / perPage); 
-                start = 0 ;
-                end = perPage;
+                let currentPageFilter = 1;
 
+                getCurrentPage(currentPageFilter)
                 renderListPage(filteredProducts,start,totalPages);
                 render(filteredProducts,start,end);
                 clickActionBtn(filteredProducts,currentPageFilter,totalPages);

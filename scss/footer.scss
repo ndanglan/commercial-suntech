@@ -30,6 +30,10 @@
                     line-height:20px;
                     margin: 0 0 27px;
                     text-transform: uppercase;
+
+                    @media (max-width:63.938rem){
+                        margin-bottom: 15px;
+                    }
                 }
 
                 p{
@@ -50,6 +54,12 @@
                             line-height:2rem;
                             transition: all 0.1s ease;
                             @include textHover;
+                        }
+
+                        @media (max-width:63.938rem){
+                            width:100%;
+                            max-width:100%;
+                            margin-bottom: 10px;
                         }
                     }
 
@@ -86,6 +96,10 @@
                             max-width: 100%;
                         }
                     }
+
+                    @media (max-width:63.938rem) and (min-width:46.25rem){
+                        text-align: left;
+                    }
                 }
 
                 .another-action{
@@ -114,6 +128,25 @@
                         margin: 35px 0 20px;
                     }
                 } 
+
+                @media (max-width:46.188rem){
+                    width:50%;
+                    max-width:50%;
+                    margin-bottom: 15px;
+                }
+
+                @media (max-width:63.938rem) and (min-width:46.25rem){
+                    width: 33.33333%;
+                    max-width:33.33333%
+                }
+            }
+
+            @media (max-width:46.188rem){
+                justify-content:center;
+            }
+
+            @media (max-width:63.938rem) and (min-width:46.25rem){
+                justify-content:flex-start;
             }
         }
     }

@@ -18,11 +18,14 @@
     slide.append(firstClone);
     slide.prepend(lastClone);
     // sau buowcs nay slides van chi la 2
-
-    const slideWidth = slides[index].clientWidth;
+    let sideWidth = slides[index].clientWidth;
+    let slideObj = {
+        value: sideWidth
+    }
+    
     // console.log(slideWidth);
-    slide.style.transform = `translateX(${-slideWidth * index}px)`;
-
+    slide.style.transform = `translateX(${-slideObj.value * index}px)`;
+    
     const startSlide =()=>{
         setInterval(()=>{
             moveToNextSlide();
@@ -35,12 +38,12 @@
         if(slides[index].id === firstClone.id){
             slide.style.transition = 'none';
             index = 1;
-            slide.style.transform = `translateX(${-slideWidth * index}px)`;
+            slide.style.transform = `translateX(${-slideObj.value * index}px)`;
         }
         if(slides[index].id === lastClone.id){
             slide.style.transition = 'none';
             index = slides.length - 2;
-            slide.style.transform = `translateX(${-slideWidth * index}px)`;
+            slide.style.transform = `translateX(${-slideObj.value * index}px)`;
         }
     })
 
@@ -49,7 +52,7 @@
         slides = getSlide();
         if(index >= slides.length -1) return;
         index++;
-        slide.style.transform = `translateX(${-slideWidth * index}px)`;
+        slide.style.transform = `translateX(${-slideObj.value * index}px)`;
         slide.style.transition = '0.7s';
         
     }
@@ -58,7 +61,7 @@
         slides = getSlide();
         if(index <= 0) return;
         index--;
-        slide.style.transform = `translateX(${-slideWidth * index}px)`;
+        slide.style.transform = `translateX(${-slideObj.value * index}px)`;
         slide.style.transition = '0.7s';
     }
 
@@ -68,26 +71,29 @@
     // BANNER-SLIDER END
 
     //PRODUCT-SLIDER
+
+    // function used controls slide 
+    // object's name and name can customize
+    // can be rewrite without big object
+    
     const featuredProductNextBtn = document.querySelector('.featured-products .slider-control-right'),
         featuredProductPrevBtn = document.querySelector('.featured-products .slider-control-left'),
         featuredProductsList = document.querySelector('.featured-products-list'),
-        featuredProducts  = featuredProductsList.querySelectorAll(".product-item"),
+        featuredProducts  = document.querySelectorAll(".featured-products .product-item"),
         upsellProductList = document.querySelector('.product-upsell .product-list'),
         upsellProducts = document.querySelectorAll('.product-upsell .product-item'),
         upsellNextBtn = document.querySelector('.product-upsell .slider-control-right'),
         upsellPrevBtn = document.querySelector('.product-upsell .slider-control-left');
-
+    
     let movePerFeaturedProduct = featuredProducts[0].clientWidth;
     let movePerUpsellProduct = upsellProducts[0].clientWidth;
+
     let calculateMaxMove = (products, movePer)=>{
         return movePer * (products.length - 6) + 0.2;
     };
     let maxMoveFeaturedProduct = calculateMaxMove(featuredProducts,movePerFeaturedProduct);
     let maxMoveUpsellProducts = calculateMaxMove(upsellProducts,movePerUpsellProduct);
 
-    // function used controls slide 
-    // object's name and name can customize
-    // can be rewrite without big object
     var nameProductList= {
         featured:{
             index:0,
@@ -102,6 +108,12 @@
             maxMove:maxMoveUpsellProducts
         }
     };
+
+    function reSize(obj,name,flag){
+        obj[name]["movePer"] = flag[0].clientWidth;
+        obj[name]["maxMove"] = calculateMaxMove(flag,obj[name]["movePer"]);
+    }
+
     let changeIndex = function(obj,name,method){
         if(method === "next"){
             if(obj[name]["paces"] > obj[name]["maxMove"]){
@@ -141,6 +153,12 @@
 
         moveProduct(upsellProductList,"upsell","prev");
     });
+
+    window.addEventListener('resize',function(){
+        reSize(nameProductList,"featured",featuredProducts);
+        reSize(nameProductList,"upsell",upsellProducts);
+        slideObj.value = slides[index].clientWidth;
+    })
     //PRODUCT-SLIDER END
 
 })();
